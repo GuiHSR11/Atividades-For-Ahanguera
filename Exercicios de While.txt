@@ -1,0 +1,183 @@
+Exercício 1- Faça um programa que imprima os números de 1 até 10 (ordem crescente WHILE).
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 1; // Inicializando a variável de controle
+    
+    // Loop while para imprimir os números de 1 até 10
+    while (i <= 10) {
+        printf("%d\n", i);
+        i++; // Incrementando a variável de controle
+    }
+    
+    return 0;
+}
+
+
+
+
+Exercício 2- Faça um programa que imprima os números de 10 até 1 (ordem decrescente WHILE).
+
+
+#include <stdio.h>
+
+int main() {
+    int i = 10; // Inicializando a variável de controle
+    
+    // Loop while para imprimir os números de 1 até 10
+    while (i >= 1) {
+        printf("%d\n", i);
+        i--; // Incrementando a variável de controle
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+Exercício 3- Faça um programa que receba a idade de 5 pessoas e imprima quantas pessoas
+são maiores que 18 anos(WHILE)
+
+
+
+#include <stdio.h>
+
+int main() {
+    int idade;
+    int contador = 0; // Inicializa o contador de pessoas maiores que 18 anos
+    int totalPessoas = 5; // Total de pessoas que serão inseridas
+
+    printf("Digite a idade de 5 pessoas:\n");
+
+    // Loop while para receber a idade das 5 pessoas
+    while (totalPessoas > 0) {
+        printf("Digite a idade: ");
+        scanf("%d", &idade);
+
+        if (idade > 18) {
+            contador++; // Incrementa o contador se a idade for maior que 18
+        }
+
+        totalPessoas--; // Decrementa o total de pessoas restantes
+    }
+
+    printf("O total de pessoas maiores que 18 anos é: %d\n", contador);
+
+    return 0;
+}
+
+
+
+
+
+Exercício 4 - Refaça o exercício da tabuada das aulas anteriores, mas agora utilizando 
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+    
+    // Solicita ao usuário que digite um número entre 1 e 10
+    printf("Digite um número entre 1 e 10: ");
+    scanf("%d", &numero);
+    
+    // Verifica se o número está dentro do intervalo permitido (1 a 10)
+    while (numero < 1 || numero > 10) {
+        printf("Número inválido. Digite um número entre 1 e 10: ");
+        scanf("%d", &numero);
+    }
+    
+    // Calcula e imprime a tabuada do número inserido
+    int i = 1;
+    while (i <= 10) {
+        printf("%d X %d = %d\n", numero, i, numero * i);
+        i++;
+    }
+    
+    return 0;
+}
+
+
+
+xercício 5 - Criar um programa que imprima o número e o nome do mês.
+O programa deve informar caso o valor digitado não esteja entre 1 e 12, e deve permitir que
+o usuário digite novamente caso o valor seja inválido.
+
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    // Solicita ao usuário que digite um número entre 1 e 12
+    printf("Digite um número entre 1 e 12: ");
+    scanf("%d", &numero);
+
+    // Verifica se o número está dentro do intervalo permitido (1 a 12)
+    while (numero < 1 || numero > 12) {
+        printf("Número inválido. Digite um número entre 1 e 12: ");
+        scanf("%d", &numero);
+    }
+
+    // Imprime o número e o nome do mês correspondente
+    while (numero >= 1 && numero <= 12) {
+        switch (numero) {
+            case 1:
+                printf("1- janeiro\n");
+                break;
+            case 2:
+                printf("2- fevereiro\n");
+                break;
+            case 3:
+                printf("3- março\n");
+                break;
+            case 4:
+                printf("4- abril\n");
+                break;
+            case 5:
+                printf("5- maio\n");
+                break;
+            case 6:
+                printf("6- junho\n");
+                break;
+            case 7:
+                printf("7- julho\n");
+                break;
+            case 8:
+                printf("8- agosto\n");
+                break;
+            case 9:
+                printf("9- setembro\n");
+                break;
+            case 10:
+                printf("10- outubro\n");
+                break;
+            case 11:
+                printf("11- novembro\n");
+                break;
+            case 12:
+                printf("12- dezembro\n");
+                break;
+
+        }
+        break; // Encerra o loop após imprimir o mês correspondente
+    }
+
+    return 0;
+}
+
+
+
+
+

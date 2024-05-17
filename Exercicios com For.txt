@@ -1,0 +1,128 @@
+Exercício 1- Faça um programa que imprima os números de 1 até 10 (ordem crescente FOR).
+
+
+#include <stdio.h>
+
+int main() {
+    // Loop for para imprimir os números de 1 até 10
+    for (int i = 1; i <= 10; i++) {
+        printf("%d\n", i);
+    }
+    
+    return 0;
+}
+
+
+Exercício 2- Faça um programa que imprima os números de 10 até 1 (ordem decrescente FOR).
+
+
+#include <stdio.h>
+
+int main() {
+    // Loop for para imprimir os números de 10 até 1 em ordem decrescente
+    for (int i = 10; i >= 1; i--) {
+        printf("%d\n", i);
+    }
+    
+    return 0;
+}
+
+
+Exercício 3- Faça um programa que receba a idade de 5 pessoas e imprima quantas pessoas
+são maiores que 18 anos(FOR)
+
+
+#include <stdio.h>
+
+int main() {
+    int idade;
+    int contador = 0; // Inicializa o contador de pessoas maiores que 18 anos
+
+    printf("Digite a idade de 5 pessoas:\n");
+
+    // Loop for para receber a idade das 5 pessoas
+    for (int i = 0; i < 5; i++) {
+        printf("Digite a idade: ");
+        scanf("%d", &idade);
+
+        if (idade > 18) {
+            contador++; // Incrementa o contador se a idade for maior que 18
+        }
+    }
+
+    printf("O total de pessoas maiores que 18 anos é: %d\n", contador);
+
+    return 0;
+}
+
+
+
+
+
+
+
+Exercício 4 - Refaça o exercício da tabuada das aulas anteriores, mas agora utilizando 
+
+
+
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+    
+    // Solicita ao usuário que digite um número entre 1 e 10
+    printf("Digite um número entre 1 e 10: ");
+    scanf("%d", &numero);
+    
+    // Verifica se o número está dentro do intervalo permitido (1 a 10)
+    while (numero < 1 || numero > 10) {
+        printf("Número inválido. Digite um número entre 1 e 10: ");
+        scanf("%d", &numero);
+    }
+    
+    // Calcula e imprime a tabuada do número inserido usando um loop for
+    for (int i = 1; i <= 10; i++) {
+        printf("%d X %d = %d\n", numero, i, numero * i);
+    }
+    
+    return 0;
+}
+
+
+xercício 5 - Criar um programa que imprima o número e o nome do mês.
+O programa deve informar caso o valor digitado não esteja entre 1 e 12, e deve permitir que
+o usuário digite novamente caso o valor seja inválido.
+
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    // Solicita ao usuário que digite um número entre 1 e 12
+    printf("Digite um número entre 1 e 12: ");
+    scanf("%d", &numero);
+
+    // Verifica se o número está dentro do intervalo permitido (1 a 12)
+    while (numero < 1 || numero > 12) {
+        printf("Número inválido. Digite um número entre 1 e 12: ");
+        scanf("%d", &numero);
+    }
+
+    // Array com os nomes dos meses
+    char *meses[] = {"janeiro", "fevereiro", "março", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"};
+
+    // Imprime o número e o nome do mês correspondente
+    for (int i = 1; i <= 12; i++) {
+        if (i == numero) {
+            printf("%d- %s\n", i, meses[i - 1]);
+            break;
+        }
+    }
+
+    return 0;
+}
+
+
+
